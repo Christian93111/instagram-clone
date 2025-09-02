@@ -1,0 +1,381 @@
+* {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+}
+
+.logo {
+    font-size: 30px;
+    font-family: 'Brush Script MT', cursive;
+}
+
+.left-side-bar {
+    width: 18%;
+    min-width: 200px;
+    height: 100vh;
+    border-right: 1px solid #504949;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.left-items {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    margin: 6px;
+    font-size: 20px;
+}
+
+.left-items i, .left-profile {
+    margin-right: 10px;
+}
+
+.left-profile {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.container {
+    width: 60%;
+    margin-left: 18%;
+    text-align: center;
+    padding: 10px;
+}
+
+.container .story .story-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.container .story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.container .story .story-item {
+    flex-direction: column;
+    flex-shrink: 0;
+}
+
+.container .story .profile img {
+    background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.container .story .story-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.container .main-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.container .main-content .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: flex-start;
+}
+
+.container .main-content .profile img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+.container .main-content .profile .time {
+    color: gray;
+}
+
+.container .main-content .profile .dot {
+    margin-left: auto;
+}
+
+.container .main-content .profile p {
+    font-size: medium;
+}
+
+.container .main-content .post-content img {
+    height: auto;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.container .main-content .reactions {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+    font-size: 22px;
+    justify-content: flex-start;
+}
+
+.container .main-content .reactions .bookmark {
+    margin-left: auto;
+}
+
+.container .main-content .likes {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.container .main-content .comment {
+    color: gray;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-side-bar {
+    width: 22%;
+    height: 100vh;
+    background-color: transparent !important;
+    margin-top: 20px;
+    position: fixed;
+    right: 0;
+    overflow-y: auto;
+}
+
+.user-profile {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+.user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.user-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info .profile-username {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.user-info .profile-username-second {
+    font-size: 12px;
+    color: #8e8e8e;
+    margin: 0;
+}
+
+.switch-btn {
+    color: #0095f6;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.suggestions {
+    margin-top: 20px;
+}
+
+.suggestions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+.suggestions-header h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #8e8e8e;
+}
+
+.see-all {
+    color: white;
+    font-size: 12px;
+    margin-right: 20px;
+}
+
+.suggestion-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    padding: 0 10px;
+}
+
+.suggestion-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.suggestion-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestion-info .username {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.suggestion-info .subtitle {
+    font-size: 12px;
+    color: #8e8e8e;
+    margin: 0;
+}
+
+.follow-button {
+    color: #0095f6;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .left-side-bar {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        border-right: none;
+        border-top: 1px solid #504949;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+
+    .left-items {
+        flex-direction: column;
+        padding: 5px;
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .left-items span {
+        display: none;
+    }
+
+    .left-items i {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .left-profile {
+        width: 20px;
+        height: 20px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .container {
+        width: 100%;
+        margin-left: 0;
+        padding: 10px;
+        padding-bottom: 80px;
+    }
+
+    .container .story {
+        overflow-x: scroll;
+        justify-content: flex-start;
+        padding: 10px;
+    }
+
+    .container .main-content {
+        width: 100%;
+        max-width: none;
+    }
+
+    .container .main-content .profile {
+        padding: 0 10px;
+    }
+
+    .container .main-content .profile img {
+        margin-left: 0;
+    }
+
+    .container .main-content .post-content img {
+        width: 100%;
+    }
+
+    .container .main-content .reactions {
+        padding: 0 10px;
+    }
+
+    .container .main-content .likes {
+        margin-left: 10px;
+    }
+
+    .container .main-content .comment {
+        margin-left: 10px;
+        padding-right: 10px;
+    }
+
+    .right-side-bar {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container .story .story-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .container .story .story-item p {
+        font-size: 12px;
+    }
+
+    .container .main-content .reactions {
+        font-size: 20px;
+        gap: 15px;
+    }
+
+    .left-items i {
+        font-size: 18px;
+    }
+}
